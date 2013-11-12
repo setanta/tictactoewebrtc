@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TicTacToe</title>
+<style>
+body {
+    background-color: lightgray;
+}
+canvas {
+    background-color: white;
+    border: 5px solid black;
+}
+#status {
+    vertical-align: top;
+}
+#message {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+</style>
+
+<script src="/socket.io/socket.io.js"></script>
+
+<script type="text/javascript" src="sdputils.js"></script>
+<script type="text/javascript" src="rtc.js"></script>
+<script type="text/javascript" src="session.js"></script>
+<script type="text/javascript" src="tictactoe.js"></script>
+<script type="text/javascript" src="main.js"></script>
+
+</head>
+<body onload="Game.init();">
+<h1>TicTacToeRTC</h1>
+
+<div style="position: relative; left: 100px;">
+<canvas id="board" width="480" height="480" style="position: absolute; left: 0; top: 0; z-index: 0;"></canvas>
+<canvas id="message" width="480" height="480" style="position: absolute; left: 0; top: 0; z-index: 1;"></canvas>
+</div>
+
+<canvas id="status" width="80" height="80"></canvas>
+</body>
+</html>
